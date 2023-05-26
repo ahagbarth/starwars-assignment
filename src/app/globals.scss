@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../styles/settings.module";
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+.navbar{
+  border-bottom: 1px grey solid;
+}
+.nav-item-bar{
+  width: 0px;
+  transition: all .3s ease-in-out; 
+  height: 2px;
+}
+.nav-item-active{
+  border-bottom: 2px #EB212E solid;
+}
+.nav-item{
+  margin-bottom: -5px;
+}
+.nav-item:hover .nav-item-bar{
+  cursor: pointer;
+  background-color: #EB212E ;
+  
+  width:100%;
+
+}
+.card-container {
+  background: rgb(128 128 128 / 0.2);
+  padding : 5px; /* border width */
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+
+}
+.card{
+  background: rgb(26,26,26);
+  cursor: pointer;
+
+}
+.border-light {
+  filter: blur(40px);
+  position: absolute;
+  z-index: -1; /* to keep it at below everything else */
+  top: 0; /* to align it at top */
+  height: 250px;
+  background: rgb(255, 255, 255, 0.5);
+  transition: all .4s ease-in-out; 
+
+}
+
+.card-container:hover .border-light{
+  left: 0px !important;
+  width: 1000px;
+}
+
